@@ -22,7 +22,8 @@ import platform
 # ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
-os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
+#os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
+os.environ["QT_FONT_DPI"] = "150"
 
 # SET AS GLOBAL WIDGETS
 # ///////////////////////////////////////////////////////////////
@@ -45,8 +46,9 @@ class MainWindow(QMainWindow):
 
         # APP NAME
         # ///////////////////////////////////////////////////////////////
-        title = "PyDracula - Modern GUI"
-        description = "PyDracula APP - Theme with colors based on Dracula for Python."
+        title = "Software Rock & Soils"
+        description = "Aplicación para el análisis del rendimiento de excavación en Python"
+
         # APPLY TEXTS
         self.setWindowTitle(title)
         widgets.titleRightInfo.setText(description)
@@ -89,8 +91,9 @@ class MainWindow(QMainWindow):
 
         # SET CUSTOM THEME
         # ///////////////////////////////////////////////////////////////
-        useCustomTheme = False
-        themeFile = "themes\py_dracula_light.qss"
+        useCustomTheme = True
+        themeFile = "themes\py_tema_oscuro.qss"
+        #themeFile = "themes\py_dracula_light.qss"
 
         # SET THEME AND HACKS
         if useCustomTheme:
