@@ -49,7 +49,7 @@ class CustomGrip(QWidget):
 
             # ENABLE COLOR
             if disable_color:
-                self.wi.top_left.setStyleSheet("background: transparent")
+                self.wi.top_left.setStyleSheet("background: #ffa")
                 self.wi.top_right.setStyleSheet("background: transparent")
                 self.wi.top.setStyleSheet("background: transparent")
 
