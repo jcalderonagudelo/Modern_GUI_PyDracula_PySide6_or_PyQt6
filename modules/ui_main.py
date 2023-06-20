@@ -12,7 +12,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from . resources_rc import *
+from resources_rc import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -50,7 +50,7 @@ class Ui_MainWindow(object):
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
-"	border-left: 2px solid rgb(255, 121, 198);\n"
+"	border-left: 2px solid #00B5FE;\n"
 "	text-align: left;\n"
 "	padding-left: 8px;\n"
 "	margin: 0px;\n"
@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
 "}\n"
 "#topLogo {\n"
 "	background-color: rgb(33, 37, 43);\n"
-"	background-image: url(:/images/images/images/PyDracula.png);\n"
+"	/* background-image: url(:/images/images/images/RSE.png); */ \n"
 "	background-position: centered;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
@@ -281,7 +281,7 @@ class Ui_MainWindow(object):
 "	border: 2px solid rgb(33, 37, 43);\n"
 "	padding-left: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
-"	selection-background-color: rgb(255, 121, 198);\n"
+"	selection-background-color: #00B5FE;\n"
 "}\n"
 "QLineEdit:hover {\n"
 "	border: 2px solid rgb(64, 71, 88);\n"
@@ -298,7 +298,7 @@ class Ui_MainWindow(object):
 "	padding: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
 "	selection-background-c"
-                        "olor: rgb(255, 121, 198);\n"
+                        "olor: #00B5FE;\n"
 "}\n"
 "QPlainTextEdit  QScrollBar:vertical {\n"
 "    width: 8px;\n"
@@ -456,7 +456,7 @@ class Ui_MainWindow(object):
 "	background-repeat: no-reperat;\n"
 " }\n"
 "QComboBox QAbstractItemView {\n"
-"	color: rgb(255, 121, 198);	\n"
+"	color: #00B5FE;	\n"
 "	background-color: rgb(33, 37, 43);\n"
 "	padding: 10px;\n"
 "	selection-background-color: rgb(39, 44, 54);\n"
@@ -486,7 +486,7 @@ class Ui_MainWindow(object):
 "    background-color: rgb(195, 155, 255);\n"
 "}\n"
 "QSlider::handle:horizontal:pressed {\n"
-"    background-color: rgb(255, 121, 198);\n"
+"    background-color: #00B5FE;\n"
 "}\n"
 "\n"
 "QSlider::groove:vertical {\n"
@@ -510,20 +510,20 @@ class Ui_MainWindow(object):
 "    background-color: rgb(195, 155, 255);\n"
 "}\n"
 "QSlider::handle:vertical:pressed {\n"
-"    background-color: rgb(255, 121, 198);\n"
+"    background-color: #00B5FE;\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "CommandLinkButton */\n"
 "QCommandLi"
                         "nkButton {	\n"
-"	color: rgb(255, 121, 198);\n"
+"	color: #00B5FE;\n"
 "	border-radius: 5px;\n"
 "	padding: 5px;\n"
-"	color: rgb(255, 170, 255);\n"
+"	color: #00B5FE;\n"
 "}\n"
 "QCommandLinkButton:hover {	\n"
-"	color: rgb(255, 170, 255);\n"
+"	color: #00B5FE;\n"
 "	background-color: rgb(44, 49, 60);\n"
 "}\n"
 "QCommandLinkButton:pressed {	\n"
@@ -651,6 +651,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setSpacing(0)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Inicio lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
         self.btn_home = QPushButton(self.topMenu)
         self.btn_home.setObjectName(u"btn_home")
         sizePolicy.setHeightForWidth(self.btn_home.sizePolicy().hasHeightForWidth())
@@ -662,6 +667,210 @@ class Ui_MainWindow(object):
         self.btn_home.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-home.png);")
 
         self.verticalLayout_8.addWidget(self.btn_home)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Inicio lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------      
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Topografia lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_topografia = QPushButton(self.topMenu)
+        self.btn_topografia.setObjectName(u"btn_topografia")
+        sizePolicy.setHeightForWidth(self.btn_topografia.sizePolicy().hasHeightForWidth())
+        self.btn_topografia.setSizePolicy(sizePolicy)
+        self.btn_topografia.setMinimumSize(QSize(0, 45))
+        self.btn_topografia.setFont(font)
+        self.btn_topografia.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_topografia.setLayoutDirection(Qt.LeftToRight)
+        self.btn_topografia.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-alarm.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_topografia)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Topografia lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Cueles lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_cueles = QPushButton(self.topMenu)
+        self.btn_cueles.setObjectName(u"btn_cueles")
+        sizePolicy.setHeightForWidth(self.btn_cueles.sizePolicy().hasHeightForWidth())
+        self.btn_cueles.setSizePolicy(sizePolicy)
+        self.btn_cueles.setMinimumSize(QSize(0, 45))
+        self.btn_cueles.setFont(font)
+        self.btn_cueles.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_cueles.setLayoutDirection(Qt.LeftToRight)
+        self.btn_cueles.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-3d.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_cueles)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Cueles lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Contornos lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_contornos = QPushButton(self.topMenu)
+        self.btn_contornos.setObjectName(u"btn_contornos")
+        sizePolicy.setHeightForWidth(self.btn_contornos.sizePolicy().hasHeightForWidth())
+        self.btn_contornos.setSizePolicy(sizePolicy)
+        self.btn_contornos.setMinimumSize(QSize(0, 45))
+        self.btn_contornos.setFont(font)
+        self.btn_contornos.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_contornos.setLayoutDirection(Qt.LeftToRight)
+        self.btn_contornos.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-drop.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_contornos)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Contornos lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Destroza lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_destroza = QPushButton(self.topMenu)
+        self.btn_destroza.setObjectName(u"btn_destroza")
+        sizePolicy.setHeightForWidth(self.btn_destroza.sizePolicy().hasHeightForWidth())
+        self.btn_destroza.setSizePolicy(sizePolicy)
+        self.btn_destroza.setMinimumSize(QSize(0, 45))
+        self.btn_destroza.setFont(font)
+        self.btn_destroza.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_destroza.setLayoutDirection(Qt.LeftToRight)
+        self.btn_destroza.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-3d.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_destroza)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Destroza lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Barrenado lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_barrenado = QPushButton(self.topMenu)
+        self.btn_barrenado.setObjectName(u"btn_barrenado")
+        sizePolicy.setHeightForWidth(self.btn_barrenado.sizePolicy().hasHeightForWidth())
+        self.btn_barrenado.setSizePolicy(sizePolicy)
+        self.btn_barrenado.setMinimumSize(QSize(0, 45))
+        self.btn_barrenado.setFont(font)
+        self.btn_barrenado.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_barrenado.setLayoutDirection(Qt.LeftToRight)
+        self.btn_barrenado.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-ban.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_barrenado)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Barrenado lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Cargue y  ventilacion lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_cargue_ventilacion = QPushButton(self.topMenu)
+        self.btn_cargue_ventilacion.setObjectName(u"btn_cargue_ventilacion")
+        sizePolicy.setHeightForWidth(self.btn_cargue_ventilacion.sizePolicy().hasHeightForWidth())
+        self.btn_cargue_ventilacion.setSizePolicy(sizePolicy)
+        self.btn_cargue_ventilacion.setMinimumSize(QSize(0, 45))
+        self.btn_cargue_ventilacion.setFont(font)
+        self.btn_cargue_ventilacion.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_cargue_ventilacion.setLayoutDirection(Qt.LeftToRight)
+        self.btn_cargue_ventilacion.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-bell.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_cargue_ventilacion)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Cargue y  ventilacion lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Retiro lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_retiro = QPushButton(self.topMenu)
+        self.btn_retiro.setObjectName(u"btn_retiro")
+        sizePolicy.setHeightForWidth(self.btn_retiro.sizePolicy().hasHeightForWidth())
+        self.btn_retiro.setSizePolicy(sizePolicy)
+        self.btn_retiro.setMinimumSize(QSize(0, 45))
+        self.btn_retiro.setFont(font)
+        self.btn_retiro.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_retiro.setLayoutDirection(Qt.LeftToRight)
+        self.btn_retiro.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-coffee.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_retiro)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando Retiro Cueles lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Soporte lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_soporte = QPushButton(self.topMenu)
+        self.btn_soporte.setObjectName(u"btn_soporte")
+        sizePolicy.setHeightForWidth(self.btn_soporte.sizePolicy().hasHeightForWidth())
+        self.btn_soporte.setSizePolicy(sizePolicy)
+        self.btn_soporte.setMinimumSize(QSize(0, 45))
+        self.btn_soporte.setFont(font)
+        self.btn_soporte.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_soporte.setLayoutDirection(Qt.LeftToRight)
+        self.btn_soporte.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-at.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_soporte)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando Soporte Cueles lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
+# ---------------------------------------------------------------------------------------------
+# --------------------------- Agregando boton Estadisticas lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------
+
+        self.btn_estadisticas = QPushButton(self.topMenu)
+        self.btn_estadisticas.setObjectName(u"btn_estadisticas")
+        sizePolicy.setHeightForWidth(self.btn_estadisticas.sizePolicy().hasHeightForWidth())
+        self.btn_estadisticas.setSizePolicy(sizePolicy)
+        self.btn_estadisticas.setMinimumSize(QSize(0, 45))
+        self.btn_estadisticas.setFont(font)
+        self.btn_estadisticas.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_estadisticas.setLayoutDirection(Qt.LeftToRight)
+        self.btn_estadisticas.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-cart.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_estadisticas)
+
+
+# ---------------------------------------------------------------------------------------------
+# ---------------------------Final agregando boton Estadisticas lateral izquierdo ------------------------
+# ---------------------------------------------------------------------------------------------         
+
+
 
         self.btn_widgets = QPushButton(self.topMenu)
         self.btn_widgets.setObjectName(u"btn_widgets")
@@ -1385,6 +1594,12 @@ class Ui_MainWindow(object):
         self.label = QLabel(self.new_page)
         self.label.setObjectName(u"label")
         self.label.setAlignment(Qt.AlignCenter)
+        self.label.setStyleSheet("""
+    QLabel {
+        background: rgb(52, 59, 72);
+        color: #fff ;
+   }
+""")
 
         self.verticalLayout_20.addWidget(self.label)
 
@@ -1538,16 +1753,31 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"PyDracula", None))
-        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Modern GUI / Flat Style", None))
+        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"Software Rock & Soils", None))
+        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Diego Triana", None))
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
-        self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
+        
+        
+        self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Inicio", None))
+        self.btn_topografia.setText(QCoreApplication.translate("MainWindow", u"Topografía", None))
+        self.btn_cueles.setText(QCoreApplication.translate("MainWindow", u"Cueles", None))
+
+
+        self.btn_contornos.setText(QCoreApplication.translate("MainWindow", u"Contornos", None))
+        self.btn_destroza.setText(QCoreApplication.translate("MainWindow", u"Destroza", None))
+        self.btn_barrenado.setText(QCoreApplication.translate("MainWindow", u"Barrenado", None))
+        self.btn_cargue_ventilacion.setText(QCoreApplication.translate("MainWindow", u"Cargue y ventilación", None))
+        self.btn_retiro.setText(QCoreApplication.translate("MainWindow", u"Retiro", None))
+        self.btn_soporte.setText(QCoreApplication.translate("MainWindow", u"Soporte", None))
+        self.btn_estadisticas.setText(QCoreApplication.translate("MainWindow", u"Estadísticas", None))
+
+
         self.btn_widgets.setText(QCoreApplication.translate("MainWindow", u"Widgets", None))
         self.btn_new.setText(QCoreApplication.translate("MainWindow", u"New", None))
         self.btn_save.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
-        self.toggleLeftBox.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
-        self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
+        self.toggleLeftBox.setText(QCoreApplication.translate("MainWindow", u"Detalles", None))
+        self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Detalles", None))
 #if QT_CONFIG(tooltip)
         self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close left box", None))
 #endif // QT_CONFIG(tooltip)
@@ -1559,16 +1789,16 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">PyDracula</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ffffff;\">An interface created using Python and PySide (support for PyQt), and with colors based on the Dracula theme created by Zeno Rocha.</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#fff;\">Software Rock & Soils</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ffffff;\">Creado para el Análisis de rendimientos para varios sistemas de excavación de túneles en roca, basado en el trabajo de Diego Alejando Triana Cortes.</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-inde"
-                        "nt:0; text-indent:0px;\"><span style=\" color:#ffffff;\">MIT License</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#bd93f9;\">Created by: Wanderson M. Pimenta</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert UI</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-uic main.ui &gt; ui_main.py</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
+                        "nt:0; text-indent:0px;\"><span style=\" color:#ffffff;\">Licencia por definir</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#fff;\"></span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#fff;\">Visita</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">www.rocksoils.com</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#fff;\">Desarrollado por: </span></p>\n"
 "<p align=\"center\" "
-                        "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
+                        "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\"> Sergio Cardona - Manuel Calderón </span></p></body></html>", None))
         self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"PyDracula APP - Theme with colors based on Dracula for Python.", None))
 #if QT_CONFIG(tooltip)
         self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Settings", None))
@@ -1656,7 +1886,7 @@ class Ui_MainWindow(object):
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
-        self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: Wanderson M. Pimenta", None))
+        self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"Desarrollado por: Sergio Cardona - Manuel Calderón", None))
         self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.3", None))
     # retranslateUi
 
